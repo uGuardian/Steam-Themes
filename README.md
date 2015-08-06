@@ -6,6 +6,8 @@ Skins will also be put into their own separate branches other than master for cl
 
 
 # Black Rock Shooter theme
+https://gyazo.com/f8dd7f21a5247082d44df4fdb2f114da
+
 Originally gotten through the reupload of the skin on gamebanana.com, where it can be found here: http://steam.gamebanana.com/guis/28947
 
 Updated for use as of 8/5/15
