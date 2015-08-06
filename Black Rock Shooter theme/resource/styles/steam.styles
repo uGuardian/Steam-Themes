@@ -223,6 +223,7 @@ groupertrans2=newgrouper2 // friends search
     MenuBG2=menucolor
     
     Divider=ultrapink1
+	DarkImageOverlay="0 0 0 80"
 
     // colors pulled from steamscheme.res
     "ClayBG"      "70 70 70 255"
@@ -309,6 +310,9 @@ groupertrans2=newgrouper2 // friends search
     HTML.SearchWide 348
     HTML.SearchTall 38
     HTML.SearchAnimationTime 0.25
+	
+    html.secureurl "126 166 75 255"
+    html.insecureurl "173 69 72 255"
     
     MessageBox.ButtonHeight		24
     
