@@ -1,0 +1,138 @@
+"resource/layout/gamespage_details_subheaderright.layout"
+{
+	controls
+	{
+		subheaderlabels { controlname="CDetailsSubHeaderLabelsRightPanel" }
+
+		gamehubbutton { controlname="Button" labeltext="#steam_gamehub" style="DetailsButton" }
+	}
+
+	colors
+	{
+		GameDetailsSubHeader.HorizontalSpacing=10
+		GameDetailsSubHeader.VerticalMargin=0
+		gamehubbgtop="67 90 122 255"
+		gamehubbgbottom="54 74 99 255"
+		gamehubborder="74 100 133 255"
+	}
+
+	styles
+	{
+		CDetailsGameSubHeaderRightPanel
+		{
+			bgcolor=newdetailbg2
+		}
+
+		DetailsButton
+		{   
+			inset="-3 0 0 0"
+			font-family=basefont
+			font-size=15
+			font-weight=400
+			textcolor="Text"
+			bgcolor=none
+
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, btndark, btndark )"
+
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, text )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, text )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, text )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, text )"  // right
+				
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, text )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, text )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, text )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, text )"
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, text )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, text )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, text )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, text )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, text )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, text )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, text )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, text )"
+			}	
+		}
+		
+		DetailsButton:hover
+		{     
+ 		textcolor="TextHover"
+      		render_bg
+                {     
+        // background fill
+        // background fill
+        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, btnlight, btnlight )"
+                
+        // lines around
+			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, texthover )"  // top
+			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, texthover )"  // bottom
+			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, texthover )"  // left
+			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, texthover )"  // right
+
+			   // single pixel fills in the corners
+			   5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, texthover )"
+			   6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, texthover )"
+			   7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, texthover )"
+			   8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, texthover )"
+        		                   9="fill( x0, y0 + 1, x0 + 1, y0 + 2, texthover )"
+			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, texthover )"
+			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, texthover )"
+			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, texthover )"
+			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, texthover )"
+			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, texthover )"
+			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, texthover )"
+			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, texthover )"
+
+      }
+		}
+		
+		DetailsButton:active
+		{
+       textcolor="TextHover"
+       render_bg
+      {     
+        // background fill
+        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
+                
+        // lines around
+		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, TextHover )"  // top
+		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, TextHover )"  // bottom
+		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, TextHover )"  // left
+		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, TextHover )"  // right
+
+        // single pixel fills in the corners
+        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, TextHover )"
+        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, TextHover )"
+        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, TextHover )"
+        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, TextHover )"
+        			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, TextHover )"
+			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, TextHover )"
+			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, TextHover )"
+			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, TextHover )"
+			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, TextHover )"
+			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, TextHover )"
+			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, TextHover )"
+			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, TextHover )"
+      }
+		}
+	}
+
+	layout
+	{
+		// Y offset here should match the vertical padding value above in the colors section
+		region { name="header" y=0 x=0 width=max height=max }
+
+		place { 
+			control=subheaderlabels,gamehubbutton
+			region=header
+			dir=right
+			align=left-center
+			margin-left=10
+			margin-right=10
+			spacing=10
+		}
+	}
+}
