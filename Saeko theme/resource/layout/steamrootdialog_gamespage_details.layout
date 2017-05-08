@@ -298,7 +298,18 @@
 		place 	{ control=GamesList region=list width=275 height=max margin=0 }
 		
 		// Body contents
-		place 	{ control=welcomedetails,friendsdetails,clouddetails,communityfilesdetails,achievementsdetails,newsdetails,nonsteamdetails,screenshotsdetails region=detailsbody dir=down width=max margin-right=10 margin-top=25 margin-left=5 spacing=10 margin-bottom=10 }
+		place 
+		{ 
+			control=welcomedetails,rentaldetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,clouddetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
+			region=detailsbody
+			dir=down
+			width=max
+			margin-right=10
+			margin-top=25
+			margin-left=5
+			spacing=10
+			margin-bottom=10 
+		}
 
 		
 		// Details border

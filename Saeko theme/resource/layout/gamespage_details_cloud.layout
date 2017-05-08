@@ -24,7 +24,7 @@
 	{
 		clouddetails 
 		{ 
-			bgcolor=BackgroundStart
+			bgcolor=newdetailbg2
 		}
 
 		everythinglabel
