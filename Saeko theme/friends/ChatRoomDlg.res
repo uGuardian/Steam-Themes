@@ -63,6 +63,10 @@
 			style="Chat_MenuButton_withChrome"
 			
 		}
+		"EmoticonButton"
+		{
+			"ControlName"		"CEmoticonButton"
+		}
 	}
 		
 	styles
@@ -120,6 +124,50 @@
 		{
 			image="graphics/mega_btn_on"
 		}
+
+		CEmoticonButton
+		{
+			padding-left=4
+			image="graphics/icon_emoticon"
+			render_bg
+			{
+				// lines around
+				1="fill( x0, y0, x1, y0 + 1, ButtonBorder )"  // top
+				2="fill( x0, y1 - 1, x1, y1, ButtonBorder )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1, ButtonBorder )"  // left
+				4="fill( x1 - 1, y0, x1, y1, ButtonBorder )"  // right
+	
+
+			}
+		}
+
+		CEmoticonButton:hover
+		{
+			image="graphics/icon_emoticon_hover"
+		}
+
+		CEmoticonButton:selected
+		{
+			image="graphics/icon_emoticon_hover"
+		}
+
+		EmoticonMenuItemStyle
+		{
+			font-size=24
+			bgcolor=none
+		}
+		
+		EmoticonMenuItemStyle:hover
+		{
+			textcolor=white
+			bgcolor=none
+		}
+		
+		EmoticonMenuItemStyle:selected
+		{
+			textcolor=white
+			bgcolor=none
+		}
 	}
 	
 	layout
@@ -133,8 +181,8 @@
 		place { control="ChatHistory" y=60 margin-left=8 margin-right=8 width=max height=max align=right dir=down margin-bottom=74 end-right=UserList }
 		
 		region { name=bottomrow align=bottom height=76 }
-		place { control="SendButton" region=bottomrow height=42 align=right margin-right=8 margin-top=8 }
-		place { control="TextEntry" region=bottomrow end-right="SendButton" height=42 width=max margin-right=8 margin-right=8 margin-left=8 margin-top=8 }
+		place { control="EmoticonButton,SendButton" region=bottomrow spacing=8 height=42 align=right margin-top=8 margin-right=8 }
+		place { control="TextEntry" region=bottomrow end-right="EmoticonButton" height=42 width=max margin-right=8 margin-right=8 margin-left=8 margin-top=8 }
 		place { control="StatusLabel" region=bottomrow align=bottom width=max margin-left=8 margin-bottom=7 }
 	}
 }
