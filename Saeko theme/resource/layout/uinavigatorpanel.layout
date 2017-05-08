@@ -92,6 +92,12 @@
 			"labelText"		"#steam_community"
 			style="CuiNavButton"
 		}
+		"label_me"
+		{
+			"ControlName"		"Label"
+			"labelText"		"ME"
+			style="CuiNavButton"
+		}
 		"label_community_friends"
 		{
 			"ControlName"		"Label"
@@ -183,13 +189,17 @@
 		library_zoom	   { ControlName=Slider showbar="1" showticks="0" style=zoomslider group=zoom zpos="4" }
 		label_zoom_separator { ControlName=Label labelText="  |  " style="LibrarySeparator" group=zoom }
 		
-		label_library_view { ControlName=Label labelText="#steam_library_views"	style="NavLabelView" group=views }
-		library_filters_list	   { ControlName=Label style="ViewListButton"	tooltiptext="#tooltip_view_list"	group=views }
-		library_filters_grid	   { ControlName=Label style="ViewGridButton" 	tooltiptext="#tooltip_view_grid"	group=views }
-		library_filters_details	   { ControlName=Label style="ViewDetailButton" tooltiptext="#tooltip_view_details"	group=views }
+		label_library_view          { ControlName=Label labelText="#steam_library_views" style="NavLabelView" 		group=views }
+		library_filters_list	    { ControlName=Label style="ViewListButton"	tooltiptext="#tooltip_view_list"	group=views }
+		library_filters_grid	    { ControlName=Label style="ViewGridButton" 	tooltiptext="#tooltip_view_grid"	group=views }
+		library_filters_details	    { ControlName=Label style="ViewDetailButton" tooltiptext="#tooltip_view_details"	group=views }
 		
+		library_music_menu { ControlName=MenuButton labelText="#Music_Nav_Menu_Artists" style="NavLabel2" showDownArrow=0 align=left group=music }
+		library_music_add_button {	ControlName=Button labelText=""	tooltiptext="#Music_Playlist_Details_Menu_Add" style="MusicAddButton" group=music_add_button visible=false }
+		library_music_player_icon { ControlName=URLLabel style="MusicPlayerIcon" tooltiptext="#music_tooltip_view_player" URLtext="steam://open/musicplayer" align=right group=music }
 		
 		emailreminderbar { zpos=1 }
+		phonereminderbar { zpos=1 }
 
 		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }		
 		URLStatusImage	{ controlname="ImagePanel" style="URLStatusImage" group="urlsec" }
@@ -197,7 +207,6 @@
 	
 	styles
 	{
-		
 		grouper
 		{
 			bgcolor=none
@@ -349,6 +358,61 @@
 			padding-left=0
 			padding-right=-1
 		
+		}
+
+		MusicAddButton
+		{
+			font-size=14
+			font-size=13 [$OSX]
+			font-family=basefont
+			textcolor="labelfocus"
+			font-style=uppercase
+			render_bg
+			{
+				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse )"
+			}
+		}
+		
+		MusicAddButton:hover
+		{
+			textcolor="white"
+			render_bg
+			{
+				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse_over )"
+			}
+		}			
+		
+		MusicPlayerIcon
+		{
+			bgcolor="none"
+			inset="-1 0 0 0"
+			render_bg={}
+			image="graphics/icon_music_player"
+			padding-left=0
+			padding-right=-1
+			padding-top=-1
+		}
+		
+		MusicPlayerIcon:hover
+		{
+			bgcolor="none"
+			inset="-1 0 0 0"
+			render_bg={}
+			image="graphics/icon_music_player_hover"
+			padding-left=0
+			padding-right=-1
+			padding-top=-1
+		}
+		
+		MusicPlayerIcon:selected
+		{
+			bgcolor="none"
+			inset="-1 0 0 0"
+			render_bg={}
+			image="graphics/icon_music_player_selected"
+			padding-left=0
+			padding-right=-1
+			padding-top=-1
 		}
 		
 		LibraryShow [!$OSX]
@@ -634,6 +698,17 @@
 			}
 		}
 		
+		BroadcastPanelMinimized
+		{
+			bgcolor="none"
+			textcolor="label"
+			inset="0 0 0 0"
+			render_bg 
+			{
+				0="fill( x0, y0, x1, y1, almostblack )" // bg
+			}
+		}
+		
 		TextEntryURL
 		{
 			font-family=basefont
@@ -850,7 +925,7 @@
 	
 	layout
 	{
-		place { control="label_store,label_library,label_friends,label_community,label_news,label_console" x=80 y=3 spacing=8 margin=2 height=40 } 
+		place { control="label_store,label_library,label_friends,label_community,label_me,label_news,label_console" x=80 y=3 spacing=8 margin=2 height=40 } 
 
 		place { control="label_community_friends,label_community_profile,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" start="label_library" y="34" x="10" }
 		
@@ -881,10 +956,15 @@
 	     
 	    place [!$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator,label_library_view" align=right y=55 height=20 spacing=3 margin-right=85 }
 		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=84 }
+		
+		place [!$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=180 }
+		place [$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=179 }
+		
 
 		place { control="library_filters_details,library_filters_list,library_filters_grid," align=right y=54 height=20 spacing=4 margin-right=11 width=20 }
 
  	  	place { control=emailreminderbar margin-top=81 margin-left=8 margin-right=8 width=max height=48 }
+ 	  	place { control=phonereminderbar margin-top=81 margin-left=8 margin-right=8 width=max height=80 }
 
 		// content pages - these are all pushed down by the email reminder bar (above) if it's visible
 		place { control=DownloadsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=emailreminderbar dir=down }
@@ -900,3 +980,4 @@
 	}
 
 }
+

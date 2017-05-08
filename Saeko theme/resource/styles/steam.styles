@@ -309,6 +309,15 @@ groupertrans2=newgrouper2 // friends search
     HTML.SearchWide 348
     HTML.SearchTall 38
     HTML.SearchAnimationTime 0.25
+
+    HTML.IMEInsetY 5
+    HTML.IMEInsetX 10
+    HTML.IMEWide 348
+    HTML.IMETall 38
+    HTML.IMEAnimationTime 0.25
+
+    html.secureurl "126 166 75 255"
+    html.insecureurl "173 69 72 255"
     
     MessageBox.ButtonHeight		24
     
@@ -4102,6 +4111,91 @@ groupertrans2=newgrouper2 // friends search
       image="graphics/icon_button_back_disabled"
     }
 	
+    FullscreenButton
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_controller_bpm"
+    }
+    
+
+    FullscreenButton:hover
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_controller_bpm_over"
+    }
+	
+    FullscreenButton:active
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_controller_bpm_down"
+    }
+	
+    FullscreenButton:disabled
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_controller_bpm_disabled"
+    }
+    
+    VRButton
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr"
+    }  
+
+    VRButton:hover
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_over"
+    }
+	
+    VRButton:active
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_down"
+    }
+	
+    VRButton:disabled
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_disabled"
+    }
+    
+    VRButtonExit
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_happy"
+    }  
+
+    VRButtonExit:hover
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_happy_over"
+    }
+	
+    VRButtonExit:active
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_happy_down"
+    }
+	
+    VRButtonExit:disabled
+    {
+      bgcolor=none
+      render_bg={}
+      image="graphics/icon_vr_disabled"
+    }
+    
     ForwardButton
     {
       bgcolor=none
