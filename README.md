@@ -14,6 +14,6 @@ Updated for use as of 8/5/15
 
 
 # Saeko theme
-https://gyazo.com/1966ab04f06d804c6b63eeb3d4a77f02
+https://gyazo.com/b9e8661d7e3d01af0ccaced8b1f61b3d
 
 Originally gotten through another skin reupload on gamebanana.com, which can be found here: http://gamebanana.com/guis/28953
